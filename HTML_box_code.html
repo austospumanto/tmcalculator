@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+
+
+	<style>
+
+		/***************/
+		/* General Stuff */
+		/***************/
+		html {
+		    background-color: #e6e9e9;
+		}
+
+		body {
+		    margin: 0 auto;
+		    padding: 2em 2em 4em;
+		    width: 800px;
+		    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    font-size: 16px;
+		    line-height: 1.5em;
+		    color: #545454;
+		    background-color: #ffffff;
+		    margin-top: 50px;
+		    margin-bottom: 50px;
+		    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+		    height: auto;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+		    color: #222;
+		    font-weight: 600;
+		}
+
+		h2 {
+		    text-align: center;
+		    text-decoration: underline;
+		}
+
+		a {
+		    color: #0083e8;
+		}
+
+		b, strong {
+		    font-weight: 600;
+		}
+
+		#pageTitle h1 {
+		    text-align: center;
+		    position: relative;
+		    top: -20px;
+		    margin-bottom: 10px;
+		    padding-bottom: 10px;
+		}
+
+
+
+
+
+		/*******************/
+		/* Utility Classes */
+		/*******************/
+		#div-column-one textarea,
+		#div-column-one input[type="text"] {
+		    opacity: 0.7;
+		}
+
+		[data-edited] {
+		    opacity: 1.0;
+		}
+
+		.nowrap {
+		    white-space: nowrap;
+		}
+
+		.inline {
+		    display: inline-block;
+		}
+
+		.clearfix {
+		    overflow: auto;
+		}
+
+		.indent1 {
+		    margin-left: 30px;
+		}
+
+		.indent2 {
+		    margin-left: 60px;
+		}
+
+
+
+
+
+
+		/****************/
+		/* Both Columns */
+		/****************/
+
+		#div-columns {
+		    position: relative;
+		}
+
+		label, input {
+		    display: block;
+		}
+
+		label {
+		    margin-bottom: 6px;
+		}
+
+		/* input text fields can be size-formatted with font-size and padding */
+		input[type=text] {
+		    border: 2px solid #7facaa;
+		    font-size: 14px;
+		    padding: 7px;
+		}
+
+		/* textAreas can be size-formatted with width/height */
+		textarea {
+		    width: 300px;
+		    height: 60px;
+		    padding: 7px;
+		    border: 2px solid #7facaa;
+		    font-size: 14px;
+		    resize: none;
+		}
+
+		.div-column {
+		    float: left;
+		    width: 400;
+		    margin-top: 50px;
+		}
+
+		#div-column-one h2,
+		#div-column-two h2 {
+		    position: relative;
+		    top: -20px;
+		}
+
+
+
+
+
+
+		/************/
+		/* Column 1 */
+		/************/
+
+		#div-column-one {
+		    margin-left: 20px;
+		    padding-right: 55px;
+		    border-right-style: solid;
+		    border-right-width: 5px;
+		    border-right-color: #7facaa;
+		}
+
+		#primer-submit {
+		    width: 250px;
+		    height: 60px;
+		    font-size: 30px;
+		    background: #7facaa;
+		    text-align: center;
+		    border: none;
+		    border-radius: 4px;
+		    color: #FFF;
+		    border: solid 2px #754444;
+		}
+
+		#primer-submit:hover {
+		    background: #754444;
+		    border: solid 2px #7facaa;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+
+
+
+
+
+		/************/
+		/* Column 2 */
+		/************/
+
+		#div-column-two {
+		    margin-left: 60px;
+		}
+
+		#primerConc, #saltConc, 
+		#primerLength, #gcContent {
+		    width: 40px;
+		}
+
+		#primerLength, #gcContent {
+		    display: inline;
+		}
+
+
+
+		/******************/
+		/* Tm Table Stuff */
+		/******************/
+		#table-tm {
+		    border-radius: 4px;
+		    border: 2px solid #7facaa;
+		    border-collapse: collapse;
+		}
+
+		#table-tm td, 
+		#table-tm th {
+		    padding-right: 30px;
+		    padding-left: 30px;
+		    border: 1px solid #7facaa;
+		}
+
+		/*#table-tm td:first-child,
+		#table-tm th:first-child  {
+		    padding-right: 50px;
+		}*/
+
+		#table-tm td:first-child {
+		    text-align: right;
+		}
+
+		#table-tm th {
+		    text-align: center;
+		}
+
+		/*#table-tm td:last-child,
+		#table-tm th:last-child  {
+		    padding-left: 30px;
+		}*/
+
+
+
+
+
+
+		/********************/
+		/* Show-Explanation */
+		/********************/
+
+		#div-show-explanation {
+		    clear: left;
+		    position: relative;
+		    margin-top: 100px;
+		    margin-left: 275px;
+		}
+
+		#button-show-explanation {
+		    width: 250px;
+		    height: 50px;
+		    font-size: 16px;
+		    background: #7facaa;
+		    text-align: center;
+		    border: none;
+		    border-radius: 4px;
+		    color: #FFF;
+		    border: solid 2px #754444;
+		}
+
+		#button-show-explanation:hover {
+		    background: #754444;
+		    border: solid 2px #7facaa;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+
+		#noEdit {
+		    position: relative;
+		    left: -80px;
+		}
+
+
+
+
+
+
+
+		/***************/
+		/* Explanation */
+		/***************/
+
+		#div-explanation {
+		    clear: left;
+		    position: relative;
+		    margin-top: 100px;
+		    color: #000000;
+		}
+
+		#explanationTitle {
+		    text-align: center;
+		}
+
+		img.tex {
+		  display: block;
+		  margin: 5px auto;
+		  border: none !important;
+		  box-shadow: 0 0 0 !important;
+		  background-color: transparent !important;
+		}
+
+		#div-explanation p {
+		    font-size: 13px;
+		    line-height: 13px;
+		}
+
+
+
+
+
+
+		/************/
+		/* Extra */
+		/************/
+
+		.hidden {
+		    display: none;
+		}
+
+		/*input[type=checkbox], label[for=whichApprox] {
+		    display: inline;
+		}
+
+		input[type=radio] {
+		    display: inline;
+		    margin-bottom: 10px;
+		}
+
+		img {
+		    background: transparent;
+		    border: 10px solid rgba(0, 0, 0, 0.12);
+		    border-radius: 4px;
+		    display: block;
+		    margin: 1.3em auto;
+		    max-width: 95%;
+		}
+
+		input[type="radio"] + label {
+		    display: inline-block;
+		    width: 100px;
+		    font-size: 14px;
+		    margin: -1px 4px 0 0;
+		    vertical-align: middle;
+		    cursor: pointer;
+		}*/
+	</style>
+
+
+
+
+
+
+
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	
+		
+	</head>
+
+
+
+	<body>
+		<div id="pageTitle">
+			<h1>Melting Temperature Calculator</h1>
+		</div>
+		<div id="div-columns" class="clearfix">
+			<div id="div-column-one" class="div-column">
+				<form id="form-sequence-input">
+					<h2>Inputs</h2>
+				
+					<label>Primer Sequence (5' --> 3')</label>
+					<textarea id="primer-sequence" type="text" data-default="e.g. ATCGTCTA...">
+					</textarea>
+					<br><br>
+					
+					<label for="primerConc">Primer Concentration [nM]</label>
+					<input type="text" id="primerConc" data-default="50">
+					<br><br>
+					
+					<label for="saltConc">Salt Concentration [mM]</label>
+					<input type="text" id="saltConc" data-default="50">
+					<br><br>
+
+					<input type="submit" id="primer-submit" value="Click to Submit" />
+				</form>
+			</div>
+
+			<div id="div-column-two" class="div-column hidden">
+				<h2>Outputs</h2>
+				<div id="first-output" class="nowrap">
+					<label for="primerLength" class="inline">Primer Length: </label>
+					<input type="text" id="primerLength" readonly>
+				</div>
+				<br>
+				<div class="nowrap">
+					<label for="gcContent" class="inline">GC Content: </label>
+					<input type="text" id="gcContent" readonly>
+				</div>
+				<br>
+				<div id="div-reverse-complement">
+					<label>Primer Reverse Complement</label>
+					<textarea id="reverse-complement-field" type="text" readonly>
+					</textarea>
+				</div>
+				<br><br>
+
+				<div id="div-tmTable">
+					<label>Melting Temperature Results</label>
+					<table id="table-tm">
+					  <thead>
+					    <tr>
+					      <th>T<sub>M</sub></th>
+					      <th>Method</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td id="table-tm-basic">5 &#176;C</td>
+					      <td class="second">Basic</td>
+					    </tr>
+					    <tr>
+					      <td id="table-tm-salt">10 &#176;C</td>
+					      <td class="second">Salt-Adjusted</td>
+					    </tr>
+					    <tr>
+					      <td id="table-tm-nn">15 &#176;C</td>
+					      <td class="second">Nearest Neighbor</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="div-show-explanation" class="hidden">
+			<button id="button-show-explanation">Show Explanation of Outputs</button>
+			<label id="noEdit">(you won't be able to edit your "Inputs" after clicking this!)</label>
+		</div>
+		<div id="div-explanation" class="hidden">
+			<h2 id="#explanationTitle">Explanation of Results</h2>
+			<section id="intro-explanation">
+				<p>So how did we get those melting temperatures? Glad you asked! We used three separate methods to get three
+					different approximations for the melting temperature. The Basic method is the least accurate, the Salt-Adjusted
+					method is more accurate than Basic, and the Nearest-Neighbor method is the most accurate. The text below walks you
+					through the math we did to get to our answers.</p>
+			</section>
+			<br>
+			<section id="basic-explanation">
+				<h3>Explanation of the "Basic" approximation method: </h3>
+				<div class="indent1">
+					<p>The "Basic" melting temperature approximation method is based solely off of the GC content and length of the strand. The idea here is that longer strands bind more strongly to each other, and that GC pairs bind more strongly to each other than AT pairs.</p>
+				</div>
+				<p class="indent1">For strands with fewer than 14 base pairs, the melting temperature is calculated using a simple rule of thumb expressed
+				by the following equation:</p>
+				<div class="indent2">
+					<p> $T_{M} (^{\circ}C) = 2*(N_{A}+N_{T}) + 4*(N_{C} + N_{G})$</p>
+					<p> Where $T_{M}$ is the melting temperature in degrees Celsius and
+					N<sub>X</sub> is the number of X's in the primer (e.g. $N_{A}$ = # of A's in the primer)</p>
+				</div>
+				<p class="indent1">For strands with lengths greater than or equal to 14, the melting temperature is calculated using the formula below:</p>
+				<div class="indent2">
+					<p> $T_{M} = 64.9 + 41*\frac{N_{G} + N_{C}}{L_{primer}} - \frac{672}{L_{primer}}$</p>
+					<p> Where $T_{M}$ is the melting temperature in degrees Celsius, 
+					N<sub>X</sub> is the number of X's in the primer (e.g. $N_{A}$ = # of A's in the primer), and $L_{primer}$ is the
+					length of the primer.</p>
+				</div >
+				<p class="indent1"> For the primer you entered:</p>
+				<div class="indent2">
+					<p  id="N_A">N<sub>A</sub> = </p>
+					<p  id="N_T">N<sub>T</sub> = </p>
+					<p  id="N_C">N<sub>C</sub> = </p>
+					<p  id="N_G">N<sub>G</sub> = </p>
+					<p  id="L_primer">$L_{primer} = $</p>
+				</div>
+				<p class="indent1"> Therefore, the melting temperature was calculated as follows:</p>
+				<div class="indent2">
+					<p  id="equationBasic">f</p>
+					<p  id="equationBasicPlug">f</p>
+					<p  id="equationBasicAnswer">f</p>
+				</div>
+			</section>
+			<br><br>
+			<section id="salt-explanation">
+				<h3>Explanation of the "Salt-Adjusted" approximation method: </h3>
+				<div class="indent1">
+					<p>The "Salt-Adjusted" melting temperature approximation method is basically just the basic method with a salt correction.
+					That is, to do this method, all we really do is take our answer from the Basic method and add a "salt correction term".
+					The idea here is that the presence of salt (like sodium (element Na)) makes the bonds between DNA stronger, raising the
+					melting temperature.</p>
+				</div>
+				<p class="indent1">For strands with fewer than 14 base pairs, the melting temperature is calculated using the following equation:</p>
+				<div class="indent2">
+					<p> $T_{M} (^{\circ}C) = 2*(N_{A}+N_{T}) + 4*(N_{C} + N_{G}) + 16.6*\log_{10}([Na^{+}]/0.05)$</p>
+					<p> Where $T_{M}$ is the melting temperature in degrees Celsius,
+					N<sub>X</sub> is the number of X's in the primer (e.g. $N_{A}$ = # of A's in the primer), and
+					$[Na^{+}]$ is the concentration of salt in moles/Liter.</p>
+				</div>
+				<p class="indent1">For strands with lengths greater than or equal to 14, the melting temperature is calculated using the formula below:</p>
+				<div class="indent2">
+					<p> $T_{M} = 100.5 + 41*\frac{N_{G} + N_{C}}{L_{primer}} - \frac{820}{L_{primer}} + 16.6*\log_{10}([Na^{+}])$ </p>
+					<p> Where $T_{M}$ is the melting temperature in degrees Celsius, 
+					N<sub>X</sub> is the number of X's in the primer (e.g. $N_{A}$ = # of A's in the primer), 
+					$L_{primer}$ is the length of the primer, and
+					$[Na^{+}]$ is the concentration of salt in moles/Liter</p>
+				</div>
+
+				<p class="indent1"> For the primer you entered:</p>
+				<div class="indent2">
+					<p id="N_ASalt">N<sub>A</sub> = </p>
+					<p id="N_TSalt">N<sub>T</sub> = </p>
+					<p id="N_CSalt">N<sub>C</sub> = </p>
+					<p id="N_GSalt">N<sub>G</sub> = </p>
+					<p id="L_primerSalt">$L_{primer} = $</p>
+					<p id="saltConcSalt">salt</p>
+				</div>
+				<p class="indent1"> Therefore, the melting temperature was calculated as follows:</p>
+				<div class="indent2">
+					<p id="equationSalt">f</p>
+					<p id="equationSaltPlug">f</p>
+					<p id="equationSaltAnswer">f</p>
+				</div>
+			</section>
+			<br><br>
+			<section id="nearest-explanation">
+				<h3>Explanation of the "Nearest-Neighbor" approximation method: </h3>
+				<div class="indent1">
+					<p>The "Nearest-Neighbor" melting temperature approximation method is different than the Basic and Salt-Adjusted methods.
+					Unlike those methods, the Nearest-Neighbor model takes into account complex thermodynamics resulting from DNA stacking
+					and hydrogen bonds. Additionally, this model takes into account the concentration of your primer in solution as well as
+					the concentration of salt in the solution. The Nearest-Neighbor model is the most theoretically accurate of the three, and
+					is often used by scientists that want to optimize their PCR experiments.</p>
+				</div>
+				<p class="indent1">The governing equation for the Nearest-Neighbor model is as follows:</p>
+				<div class="indent2">
+					<p> $T_{M} (^{\circ}C) = \frac{\Delta H-3400}{\Delta S + R*\log_{10}(C_{primer}/4)} + 16.6*\log_{10}([Na^{+}]) - 273.15$</p>
+					<p> Where $T_{M}$ is the melting temperature in degrees Celsius,
+					$\Delta H$ is the enthalpy factor in cal/mole,
+					$\Delta S$ is the entropy factor in cal/mole,
+					R is the universal gas constant in cal/mole/Liter,
+					$C_{primer}$ is the primer concentration in moles/Liter, and
+					$[Na^{+}]$ is the concentration of salt (sodium) in the solution.</p>
+				</div>
+				<p class="indent1"> For the primer you entered:</p>
+				<div class="indent2">
+					<p id="dhNearest">f</p>
+					<p id="dsNearest">f</p>
+					<p id="RNearest">f</p>
+					<p id="primerConcNearest">f</p>
+					<p id="saltConcNearest">f</p>
+				</div>
+				<p class="indent1"> Therefore, the melting temperature was calculated as follows:</p>
+				<div class="indent2">
+					<p id="equationNearest">f</p>
+					<p id="equationNearestPlug">f</p>
+					<p id="equationNearestAnswer">f</p>
+				</div>
+			</section>
+		</div>
+
+	</body>
+
+
+
+
+</html>
+
+
+
+
+<script>var lineBreak = $("<br>");
+var bases = ["A", "T", "C", "G"];
+var basicTM = 0;
+var saltTM = 0;
+var nearestTM = 0;
+var pSeq = "";
+
+var final_dH = 0;
+var final_dS = 0;
+var R = 1.987;
+
+var unifiedDH = {
+    AA_TT: -7.9,
+    AT_TA: -7.2,
+    TA_AT: -7.2,
+    CA_GT: -8.5,
+    GT_CA: -8.4,
+    CT_GA: -7.8,
+    GA_CT: -8.2,
+    CG_GC: -10.6,
+    GC_CG: -9.8,
+    GG_CC: -8.0,
+    
+    TC_AG: -8.2,
+    AC_TG: -8.4,
+    TG_AC: -8.5,
+    AG_TC: -7.8,
+    TT_AA: -7.9,
+    CC_GG: -8.0
+};
+
+var unifiedDS = {
+    AA_TT: -22.2,
+    AT_TA: -20.4,
+    TA_AT: -21.3,
+    CA_GT: -22.7,
+    GT_CA: -22.4,
+    CT_GA: -21.0,
+    GA_CT: -22.2,
+    CG_GC: -27.2,
+    GC_CG: -24.4,
+    GG_CC: -19.9,
+    
+    TC_AG: -22.2,
+    AC_TG: -22.4,
+    TG_AC: -22.7,
+    AG_TC: -21.0,
+    TT_AA: -22.2,
+    CC_GG: -19.9
+};
+
+
+var unifiedDG= {
+    AA_TT: -1.00,
+    AT_TA: -0.88,
+    TA_AT: -0.58,
+    CA_GT: -1.45,
+    GT_CA: -1.44,
+    CT_GA: -1.28,
+    GA_CT: -1.30,
+    CG_GC: -2.17,
+    GC_CG: -2.24,
+    GG_CC: -1.84,
+    
+    TC_AG: -1.30,
+    AC_TG: -1.44,
+    TG_AC: -1.45,
+    AG_TC: -1.28,
+    TT_AA: -1.00,
+    CC_GG: -1.84
+};
+
+var initEnergies = {
+    term_GC_H: 0.1,
+    term_GC_S: -2.8/1000.0,
+    term_GC_G: 0.98,
+    term_AT_H: 2.3,
+    term_AT_S: 4.1/1000.0,
+    term_AT_G: 1.03
+};
+
+var pairCombos = [
+    "AA",
+    "TT",
+    "GG",
+    "CC",
+    "AT",
+    "AC",
+    "AG",
+    "TA",
+    "TC",
+    "TG",
+    "GA",
+    "GC",
+    "GT",
+    "CA",
+    "CG",
+    "CT"
+];
+
+var opposites = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C"
+};
+
+var revCompNN = {
+    AA: "TT",
+    AT: "AT",
+    TA: "TA",
+    CA: "TG",
+    GT: "AC",
+    CT: "AG",
+    GA: "TC",
+    CG: "CG",
+    GC: "GC",
+    GG: "CC",
+
+    TT: "AA",
+    TG: "CA",
+    AC: "GT",
+    AG: "CT",
+    TC: "GA",
+    CC: "GG",
+};
+
+var compNN = {
+    AA: "TT",
+    AT: "TA",
+    TA: "AT",
+    CA: "GT",
+    GT: "CA",
+    CT: "GA",
+    GA: "CT",
+    CG: "GC",
+    GC: "CG",
+    GG: "CC",
+
+    TT: "AA",
+    TG: "AC",
+    AC: "TG",
+    AG: "TC",
+    TC: "AG",
+    CC: "GG",
+};
+
+var blankNN = {
+    AA_TT: 0,
+    AT_TA: 0,
+    TA_AT: 0,
+    CA_GT: 0,
+    GT_CA: 0,
+    CT_GA: 0,
+    GA_CT: 0,
+    CG_GC: 0,
+    GC_CG: 0,
+    GG_CC: 0,
+
+    TC_AG: 0,
+    AC_TG: 0,
+    TG_AC: 0,
+    AG_TC: 0,
+    TT_AA: 0,
+    CC_GG: 0
+};
+
+
+
+
+
+
+
+
+/********************************/
+/** General Utility Functions ***/
+/********************************/
+function seqToPairs(sequence) {
+    var pairs = [];
+    for (var i=0; i<sequence.length-1; i++) {
+        var base = sequence[i];
+        var nextBase = sequence[i+1];
+        var bp = base.concat(nextBase);
+        pairs.push(bp);
+    }
+    return pairs;
+};
+
+function cleanSequence(sequence) {
+    var cleanedSequence = "";
+    for (var i=0; i<sequence.length; i++) {
+        var base = sequence[i];
+        if (isValidBase(base)) {
+            cleanedSequence += base.toUpperCase();
+        }
+    }
+    return cleanedSequence;
+};
+
+function isValidBase(base) {
+    for (var i=0; i<bases.length; i++) {
+        if (base === bases[i] || base === bases[i].toLowerCase()) return true;
+    }
+    return false;
+};
+
+function isValidSequence(sequence) {
+    console.log("called: isValidSequence(" + sequence + ")");
+    sequence = sequence.toUpperCase();
+    if (sequence === "" || sequence.length < 11) {
+        return false;
+    }
+    for (var i=0; i<sequence.length; i++) {
+        var base = sequence[i];
+        if (!isValidBase(base) && base !== " " && base !== "\n") {
+            return false;
+        }
+    }
+    return true;
+};
+
+function comp(base) {
+    return opposites[base];
+};
+
+function reverseComplement(sequence) {
+    console.log("called: reverseComplement(" + sequence + ")");
+    var revComp = "";
+    for (var i=sequence.length-1; i>-1; i--) {
+        revComp += comp(sequence[i]);
+    }
+    return revComp;
+};
+
+function countGC(sequence) {
+    numGC = 0;
+    for (var i=0; i<sequence.length; i++) {
+        var base = sequence[i];
+        if (base == "G" || base == "C") numGC++;
+    }
+    return numGC;
+};
+
+function calcGCFraction(sequence) {
+    console.log("called: calcGCFraction(" + sequence + ")");
+    return(countGC(sequence)/sequence.length);
+};
+
+function isValidSaltConc(saltConc) {
+    for (var i=0; i<saltConc.length; i++) {
+        var ch = saltConc[i];
+        if (!(/^[0-9]+$/.test(ch))) return false;
+    }
+    if (parseFloat(saltConc) <= 0.0 || parseFloat(saltConc) > 1000.0) return false;
+    return true;
+};
+
+function isValidPrimerConc(primerConc) {
+    for (var i=0; i<primerConc.length; i++) {
+        var ch = primerConc[i];
+        if (!(/^[0-9]+$/.test(ch))) return false;
+    }
+    if (parseFloat(primerConc) <= 0.0 || parseFloat(primerConc) > 1000.0) return false;
+    return true;
+};
+
+function countBase(base, sequence) {
+    var n = 0;
+    for (var i=0; i<sequence.length; i++) {
+        if (base === sequence[i]) n++;
+    }
+    return n;
+};
+
+
+
+
+
+
+/********************************/
+/******* NN Utility Functions ***/
+/********************************/
+function pairsToNNKeys(pairs) {
+    var keys = [];
+    for (var i=0; i<pairs.length; i++) {
+        var key = pairToNNKey(pairs[i]);
+        keys.push(key);
+    }
+    return keys;
+}
+
+function pairToNNKey( pair ) {
+    var opp_pair = compNN[pair];
+    var key = pair + "_" + opp_pair;
+    return key;
+};
+
+function seqToNNKeys( sequence ) {
+    console.log("called: seqToNNKeys");
+    var pairs = seqToPairs(sequence);
+    var keys = pairsToNNKeys(pairs);
+    return keys;
+};
+
+function getDH(sequence) {
+    console.log("called: getDH");
+    var keys = seqToNNKeys(sequence);
+    var dH = 0;
+    for (var i=0; i<keys.length; i++) {
+        key = keys[i];
+        dH += unifiedDH[key];
+    }
+    if (sequence[sequence.length] === "G" || sequence[sequence.length] === "C") {
+        dH += 0.1;
+    }
+    else {
+        dH += 2.3;
+    }
+    return dH;
+};
+
+function getDS(sequence) {
+    console.log("called: getDS");
+    pSeq = sequence;
+    var keys = seqToNNKeys(sequence);
+    var dS = 0;
+    for (var i=0; i<keys.length; i++) {
+        key = keys[i];
+        dS += unifiedDS[key];
+    }
+    if (sequence[sequence.length] === "G" || sequence[sequence.length] === "C") {
+        dS += -2.8;
+    }
+    else {
+        dS += 4.1;
+    }
+    return dS;
+};
+
+
+
+
+
+
+
+/********************************/
+/*** Input Getter Functions *****/
+/********************************/
+function getPrimerSequence() {
+    console.log("called: getPrimerSequence() with result = " + $("#primer-sequence").text())
+    return $("#primer-sequence").val();
+};
+
+function getPrimerConc() {
+    return $("#primerConc").val().trim();
+};
+
+function getSaltConc() {
+    return $("#saltConc").val().trim();
+};
+
+
+
+
+
+
+
+/********************************/
+/*** Output Setter Functions *****/
+/********************************/
+function setLengthField(length) {
+    $("#primerLength").val(length);
+};
+
+function setGCContentField(content) {
+    $("#gcContent").val(content + "%");
+};
+
+function setReverseComplementField(revComp) {
+    $("#reverse-complement-field").val(revComp);
+};
+
+function setTableMeltingTemps(temps) {
+    $("#table-tm-basic").text(temps[0] + "\xB0C");
+    $("#table-tm-salt").text(temps[1] + "\xB0C");
+    $("#table-tm-nn").text(temps[2] + "\xB0C");
+};
+
+function setPrimerSequenceInputField(sequence) {
+    $("#primer-sequence").val(sequence);
+};
+
+function fillOutputs() {
+    var sequence = cleanSequence(getPrimerSequence());
+    var meltingTemps = getMeltingTemps(sequence);
+    setTableMeltingTemps(meltingTemps);
+    setLengthField(sequence.length);
+    setGCContentField(Math.round(calcGCFraction(sequence)*100));
+    setReverseComplementField(reverseComplement(sequence));
+    setPrimerSequenceInputField(sequence);
+};
+
+
+
+
+
+
+
+
+/********************************/
+/*** Melting Temp Functions *****/
+/********************************/
+function getBasicTM(sequence) {
+    var meltingTemp = 0;
+    if (sequence.length < 14) {
+        var numGC = countGC(sequence);
+        var numAT = sequence.length - numGC;
+        meltingTemp = 2*numAT + 4*numGC;
+    }
+    else {
+        meltingTemp = 64.9 + 41*countGC(sequence)/sequence.length - 672.4/sequence.length;
+    }
+    meltingTemp = meltingTemp.toFixed(1);
+    basicTM = meltingTemp;
+    return meltingTemp;
+};
+
+function getSaltTM(sequence) {
+    var meltingTemp = 0;
+    var saltConc = parseFloat(getSaltConc());
+    if (sequence.length < 14) {
+        var numGC = countGC(sequence);
+        var numAT = sequence.length - numGC;
+        meltingTemp = 2*numAT + 4*numGC + 16.6*Math.log10(saltConc/50.0)
+    }
+    else {
+        var numGC = countGC(sequence);
+        meltingTemp = 100.5 + 41*numGC/sequence.length - 820/sequence.length + 16.6*Math.log10(saltConc/1000);
+    }
+    meltingTemp = meltingTemp.toFixed(1);
+    saltTM = meltingTemp;
+    return meltingTemp;
+};
+
+function getNearestTM(sequence) {
+    var dH = getDH(sequence);
+    final_dH = dH;
+    var dS = getDS(sequence);
+    final_dS = dS;
+    var primerConc = parseFloat(getPrimerConc());
+    var saltConc = parseFloat(getSaltConc());
+    var meltingTemp = (dH-3.4)*1000.0/(dS + 1.987*Math.log(primerConc*Math.pow(10,-9)/4.0)) + 16.6*Math.log10(saltConc/1000) - 273.15;
+    meltingTemp = meltingTemp.toFixed(1);
+    nearestTM = meltingTemp;
+    return meltingTemp;
+};
+
+function getMeltingTemps(sequence) {
+    console.log("getMeltingTemps: sequence = " + sequence);
+    var TMs = [getBasicTM(sequence), getSaltTM(sequence), getNearestTM(sequence)];
+    return TMs;
+};
+
+
+
+
+
+
+
+/********************************/
+/* HTML Interaction Functions ***/
+/********************************/
+function giveDivColumnOneHover() {
+    $("#div-column-one").hover(divOneMouseEnter, divOneMouseLeave);
+    $("#div-column-one").addClass("hoverEvents");
+    $("#div-column-one").find("textarea, input:text").focus(
+        function() {
+            $("#div-column-one").off("mouseenter").off("mouseleave");
+            $("#div-column-one").removeClass("hoverEvents");
+            $("#div-column-one").fadeTo(200, 1.0);
+        }
+    );
+};
+
+function divOneMouseEnter() {
+    $("#div-column-one").fadeTo(200, 1.0);
+};
+
+function divOneMouseLeave() {
+    $("#div-column-one").fadeTo(200, 0.5);
+};
+
+function setUpDefaultText() {
+    $("#div-column-one").find('textarea, input:text').each(
+        function() {
+            $(this).val($(this).data("default"));
+            $(this).fadeTo(0, 0.7);
+        }
+    ).focus(
+        function() {
+            // If the user has NOT edited the text clear it when they gain focus
+            if (!$(this).data('edited')) {
+                this.value = "";
+                $(this).fadeTo(0, 1.0);
+            }
+        }
+    ).change(
+        function() {
+            // Fires on blur if the content has been changed by the user
+            $(this).data('edited', this.value != "");
+        }
+    ).blur(
+        function() {
+            // Put the default text back in the textarea if its not been edited
+            if (!$(this).data('edited')) {
+                this.value = $(this).data('default');
+                $(this).fadeTo(0, 0.7);
+            }
+        }
+    );
+};
+
+function shiftDivOpacity() {
+    var $divColumnOne = $("#div-column-one");
+    var $divColumnTwo = $("#div-column-two");
+    var $divShowExplanation = $("#div-show-explanation");
+
+    $divColumnTwo.fadeIn(500);
+
+    $divColumnOne.fadeTo(500, 0.5);
+    $divColumnOne.addClass("submitted");
+    giveDivColumnOneHover();
+
+    $divShowExplanation.fadeIn(500);
+    $divShowExplanation.on('click', '#button-show-explanation', showExplanation);
+};
+
+function showExplanation() {
+    $("#div-show-explanation").remove();
+    $("#div-explanation").fadeIn(800);
+    $("html, body").animate({ scrollTop: 750 }, 600);
+
+    $("#div-column-one").fadeTo(500, 0.5);
+    $("#div-column-one").off("mouseenter").off("mouseleave");
+    $("#div-column-one").find("textarea, input:text").attr("readonly", true).off("focus").off("blur").off("change");
+    $("form, #primer-submit").off("click");
+
+    fillBasicExplanation();
+    fillSaltExplanation();
+    fillNearestExplanation();
+};
+
+function fillBasicExplanation() {
+    var nA = countBase("A", pSeq);
+    console.log("nA: " + nA);
+    var nT = countBase("T", pSeq);
+    var nC = countBase("C", pSeq);
+    var nG = countBase("G", pSeq);
+    $("#N_A").html("$N_{A} = " + nA + "$");
+    console.log($("#N_A").html());
+    $("#N_T").html("$N_{T} = " + nT + "$");
+    $("#N_C").html("$N_{C} = " + nC + "$");
+    $("#N_G").html("$N_{G} = " + nG + "$");
+    $("#L_primer").html("$L_{primer} = " + pSeq.length + "$");
+    
+    var equationBasicLow = "$T_{M} (^{\\circ}C) = 2*(N_{A}+N_{T}) + 4*(N_{C} + N_{G})$";
+    var equationBasicHigh = "$T_{M} = 64.9 + 41*\\frac{N_{G} + N_{C}}{L_{primer}} - \\frac{672}{L_{primer}}$";
+    
+
+    var equationBasic = "";
+    var equationBasicPlug = "";
+    var equationBasicAnswer = "$T_{M} = " + basicTM + "^{\\circ}C$";
+    if (pSeq.length<14) {
+        equationBasic = equationBasicLow;
+        equationBasicPlug = equationBasicLow.replace("N_{A}", nA).replace("N_{T}", nT).replace("N_{C}", nC).replace("N_{G}", nG);
+    } else {
+        equationBasic = equationBasicHigh;
+        equationBasicPlug = equationBasicHigh.replace(reg("N_{A}"), nA).replace(reg("N_{T}"), nT).replace(reg("N_{C}"), nC).replace(reg("N_{G}"), nG).replace(reg("L_{primer}"), pSeq.length);
+    }
+
+    $("#equationBasic").html(equationBasic);
+    $("#equationBasicPlug").html(equationBasicPlug);
+    $("#equationBasicAnswer").html(equationBasicAnswer);
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    $("#basic-explanation p").css("font-size", "13px");
+};
+
+function fillSaltExplanation() {
+    var nA = countBase("A", pSeq);
+    var nT = countBase("T", pSeq);
+    var nC = countBase("C", pSeq);
+    var nG = countBase("G", pSeq);
+    var saltConc = (parseFloat(getSaltConc().trim())/1000.0).toFixed(3);
+    $("#N_ASalt").html("$N_{A} = " + nA + "$");
+    $("#N_TSalt").html("$N_{T} = " + nT + "$");
+    $("#N_CSalt").html("$N_{C} = " + nC + "$");
+    $("#N_GSalt").html("$N_{G} = " + nG + "$");
+    $("#L_primerSalt").html("$L_{primer} = " + pSeq.length + "$");
+    $("#saltConcSalt").html("$[Na^{+}] = " + saltConc*1000.0 + "*10^{-3} \\frac{mole}{L}$");
+    
+    var equationSaltLow = "$T_{M} (^{\\circ}C) = 2*(N_{A}+N_{T}) + 4*(N_{C} + N_{G}) + 16.6*\\log_{10}([Na^{+}]/0.05)$";
+    var equationSaltHigh = "$T_{M} = 100.5 + 41*\\frac{N_{G} + N_{C}}{L_{primer}} - \\frac{800}{L_{primer}} + 16.6*\\log_{10}([Na^{+}])$";
+    
+
+    var equationSalt = "";
+    var equationSaltPlug = "";
+    var equationSaltAnswer = "$T_{M} = " + saltTM + "^{\\circ}C$";
+    if (pSeq.length<14) {
+        equationSalt = equationSaltLow;
+        equationSaltPlug = equationSaltLow.replace("N_{A}", nA).replace("N_{T}", nT).replace("N_{C}", nC).replace("N_{G}", nG).replace("[Na^{+}]", saltConc);
+    } else {
+        equationSalt = equationSaltHigh;
+        equationSaltPlug = equationSaltHigh.replace(reg("N_{A}"), nA).replace(reg("N_{T}"), nT).replace(reg("N_{C}"), nC).replace(reg("N_{G}"), nG).replace(reg("L_{primer}"), pSeq.length).replace("[Na^{+}]", saltConc);
+    }
+
+    $("#equationSalt").html(equationSalt);
+    $("#equationSaltPlug").html(equationSaltPlug);
+    $("#equationSaltAnswer").html(equationSaltAnswer);
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    $("#salt-explanation p").css("font-size", "13px");
+};
+
+function fillNearestExplanation() {
+    var saltConc = (parseFloat(getSaltConc().trim())/1000.0).toFixed(3);
+    var primerConc = parseFloat(getPrimerConc().trim());
+    final_dH = parseFloat(final_dH).toFixed(2);
+    final_dS = parseFloat(final_dS).toFixed(2);
+    $("#dhNearest").html("$\\Delta H = " + final_dH + "*10^{3} \\frac{cal}{mole}$");
+    $("#dsNearest").html("$\\Delta S = " + final_dS + " \\frac{cal}{mole}$");
+    $("#RNearest").html("$R = " + R + " \\frac{cal}{mole*L}$");
+    $("#saltConcNearest").html("$[Na^{+}] = " + saltConc*1000.0 + "*10^{-3} \\frac{mole}{L}$");
+    $("#primerConcNearest").html("$C_{primer} = " + primerConc + "*10^{-9} \\frac{mole}{L}$");
+    
+    var equationNearest = "$T_{M} (^{\\circ}C) = \\frac{\\Delta H - 3400}{\\Delta S + R*\\log_{10}(C_{primer}/4)} + 16.6*\\log_{10}([Na^{+}]) - 273.15$";
+    var equationNearestPlug = equationNearest.replace("[Na^{+}]", saltConc).replace("\\Delta H", final_dH*1000.0).replace("\\Delta S", final_dS).replace("R", 1.987).replace("C_{primer}", primerConc + "*10^{-9}").replace("[Na^{+}]", saltConc);
+    var equationNearestAnswer = "$T_{M} = " + nearestTM + "^{\\circ}C$";
+
+    $("#equationNearest").html(equationNearest);
+    $("#equationNearestPlug").html(equationNearestPlug);
+    $("#equationNearestAnswer").html(equationNearestAnswer);
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    $("#nearest-explanation p").css("font-size", "13px");
+};
+
+function reg(str) {
+    return (new RegExp(str, 'g'));
+};
+
+function verifyInputs(sequence) {
+    if (!isValidSequence(getPrimerSequence())) {
+        alert("Please enter a valid primer sequence (enter only bases - A, T, C, G - and spaces). Also make sure your sequence is at least 10 bases long.");
+        return false;
+    }
+    if (!isValidSaltConc(getSaltConc())) {
+        alert("Please enter a valid salt concentration (a number between 0 and 1000)");
+        return false;
+    }
+    if (!isValidPrimerConc(getPrimerConc())) {
+        alert("Please enter a valid primer concentration (a number between 0 and 1000)");
+        return false;
+    }
+    return true;
+};
+
+function TeXify() {
+    $('code.tex').each(function(i, e) {
+        e = $(e);
+        e.replaceWith('<img class="tex" src="http://'+
+                      +(i % 10)
+                      +'.chart.apis.google.com/chart?cht=tx&chf=bg,s,000000&chl='
+                      +encodeURIComponent(e.text())+'"/>');
+    });
+};
+
+
+
+
+
+
+
+/********************************/
+/*** Initializing Functions *****/
+/********************************/
+var sequenceInputHandler= {
+    init: function() {
+        $("form").on("click", "#primer-submit", sequenceInputHandler.submitHandler);
+        setUpDefaultText();
+
+    },
+    submitHandler: function(event) {
+        console.log("submitHandler");
+        if (!verifyInputs()) return false;
+        fillOutputs();
+        shiftDivOpacity();
+        event.preventDefault();
+    },
+
+    checkedApproxMethod: 0
+};
+
+var setUpPage = function() {
+  
+};
+
+$(document).ready(function() {
+    setUpPage();
+	sequenceInputHandler.init();
+    console.log("done");
+});
+
+</script>
